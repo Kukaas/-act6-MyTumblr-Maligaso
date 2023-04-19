@@ -3,10 +3,10 @@
 session_start();
 
 //create a pre defined username and password if you dont have a database
-$my_username = "luffytaro";
+$my_username = "chestermaligaso29@gmail.com";
 $my_password = "12345";
-$my_name = "Monkey D. Luffy";
-$my_address = "Dawn Island, Foosha Village";
+$my_name = "Chester Luke A. Maligaso";
+$my_address = "Libtangin, Gasan, Marinduque";
 
 //check the url for the redirection
 $url_add = "http://".$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'];

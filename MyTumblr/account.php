@@ -78,17 +78,17 @@ else if(isset($_REQUEST['logout']) === true){
             </div>
 
             <div class="px-4 py-3">
-                <h5 class="mb-0">Devil Fruit</h5>
+                <h5 class="mb-0">Favorite Animes</h5>
                 <div class="p-4 rounded shadow-sm bg-light">
-                    <p class="font-italic mb-0">Gomu-Gomu no mi</p>
-                    <p class="font-italic mb-0">or</p>
-                    <p class="font-italic mb-0">Hito-Hito no mi: Model Nika</p>
+                    <p class="font-italic mb-0">One Piece</p>
+                    <p class="font-italic mb-0">Dr. Stone</p>
+                    <p class="font-italic mb-0">Black Clover</p>
                 </div>
             </div>
 
             <div class="py-4 px-4">
                 <div class="d-flex align-items-center justify-content-between mb-3">
-                    <h5 class="mb-0">Favorite Captures</h5><a href="#" class="btn btn-link text-muted">Show all</a>
+                    <h5 class="mb-0">Favorite Images</h5><a href="#" class="btn btn-link text-muted">Show all</a>
                 </div>
                 <div class="row" style="cursor: pointer">
                     
