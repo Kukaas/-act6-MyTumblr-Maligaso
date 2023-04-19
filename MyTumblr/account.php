@@ -1,45 +1,65 @@
+<?php
+
+//start session
+session_start();
+
+if(isset($_SESSION['session_username']) === false){
+    header("Location: index.php?loginfirst");
+}
+else if(isset($_REQUEST['logout']) === true){
+    session_destroy();
+    header("Location: index.php?logout");
+}
+
+
+?>
+
+
+
+
 <!doctype html>
-                        <html>
-                            <head>
-                                <meta charset='utf-8'>
-                                <meta name='viewport' content='width=device-width, initial-scale=1'>
-                                <title>Portfolio Page</title>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <title>Portfolio Page</title>
+        <link href='css/bootstrap.min.css' rel='stylesheet'>
+        <script type='text/javascript' src='js/jquery.min.js'></script>
+            <style>
+            .profile-head {
+                transform: translateY(5rem)
+            }
+            .cover {
+                background-image: url('images/photo-profile-background.avif');
+                background-size: cover;
+                background-repeat: no-repeat
+            }
 
-                                <link href='css/bootstrap.min.css' rel='stylesheet'>
-
-                                <script type='text/javascript' src='js/jquery.min.js'></script>
-
-                                <style>.profile-head {
-    transform: translateY(5rem)
-}
-.cover {
-    background-image: url('images/photo-profile-background.avif');
-    background-size: cover;
-    background-repeat: no-repeat
-}
-
-body {
-    background: #654ea3;
-    background: linear-gradient(to right, #e96443, #904e95);
-    min-height: 100vh;
-    overflow-x: hidden
-}</style>
-                                </head>
-                                <body oncontextmenu='return false' class='snippet-body'>
-                                <div class="row py-5 px-4">
+            body {
+                background: #654ea3;
+                background: linear-gradient(to right, #e96443, #904e95);
+                min-height: 100vh;
+                overflow-x: hidden
+            }
+                </style>
+    </head>
+<body oncontextmenu='return false' class='snippet-body'>
+<div class="row py-5 px-4">
     <div class="col-md-5 mx-auto">
         <!-- Profile widget -->
         <div class="bg-white shadow rounded overflow-hidden">
             <div class="px-4 pt-0 pb-4 cover">
                 <div class="media align-items-end profile-head">
-                    <div class="profile mr-3"><img src="images/photo-profile.avif" alt="..." width="150" class="rounded mb-2 img-thumbnail"><a href="#" class="btn btn-outline-dark btn-sm btn-block">Edit Profile</a>
+                    <div class="profile mr-3"><img src="images/photo-profile.avif" alt="..." width="150" class="rounded mb-2 img-thumbnail">
+                    <a href="?logout" class="btn btn-outline-dark btn-sm btn-block">Sign Out</a>
 
 
                     </div>
                     <div class="media-body mb-5 text-white">
-                        <h4 class="mt-0 mb-0">Ryan Clifford L. Perez</h4>
-                        <p class="small mb-4"> <i class="fas fa-map-marker-alt mr-2"></i>Marinduque PH
-                         </p>
+                        <h4 class="mt-0 mb-0"><?php  echo $_SESSION['session_name'];  ?></h4>
+                        <p class="small mb-4"> <i class="fas fa-map-marker-alt mr-2"></i>
+                        <?php echo $_SESSION['session_address'];  ?>
+                        </p>
                     </div>
                 </div>
             </div>
