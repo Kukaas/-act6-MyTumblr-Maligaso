@@ -3,10 +3,10 @@
 session_start();
 
 //create a pre defined username and password if you dont have a database
-$my_username = "ChesterLuke";
+$my_username = "luffytaro";
 $my_password = "12345";
-$my_name = "Chester Luke A. Maligaso";
-$my_address = "Libtangin, Gasan, Marinduque";
+$my_name = "Monkey D. Luffy";
+$my_address = "Dawn Island, Foosha Village";
 
 //check the url for the redirection
 $url_add = "http://".$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'];
@@ -30,8 +30,6 @@ if (isset($_POST['login']) === true){
 		$_SESSION['session_address'] = $my_address;
 	}
 }
-
-
 ?>
 
 
@@ -109,7 +107,7 @@ if (isset($_POST['login']) === true){
 								</div>
 	            </div>
 	            <div class="form-group">
-	            	<button type="submit" class="btn btn-primary rounded submit p-3 px-5" name="login">Get Started</button>
+	            	<button type="submit" class="btn btn-primary rounded submit p-3 px-5" name="login">Log In</button>
 	            </div>
 	          </form>
 
@@ -119,12 +117,6 @@ if (isset($_POST['login']) === true){
 			</div>
 		</div>
 	</section>
-
-  <!--<script src="js/jquery.min.js"></script>
-  <script src="js/popper.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/main.js"></script> -->
-
-	</body>
+</body>
 </html>
 
